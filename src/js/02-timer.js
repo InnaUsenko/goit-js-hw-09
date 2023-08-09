@@ -74,7 +74,7 @@ startBtn.addEventListener('click', () => {
       startBtn.disabled = false;
       selector.disabled = false;
     } else {
-      indicator = convertMs(selectedDate - new Date());
+      let indicator = convertMs(selectedDate - new Date());
       daysIndicator.textContent = addLeadingZero(indicator.days);
       hoursIndicator.textContent = addLeadingZero(indicator.hours);
       minutesIndicator.textContent = addLeadingZero(indicator.minutes);
