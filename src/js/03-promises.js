@@ -15,7 +15,7 @@ myForm.addEventListener('submit', event => {
     amountInt: parseInt(amount.value),
   };
 
-  for (const i = 0; i < dataObj.amountInt; i++) {
+  for (let i = 0; i < dataObj.amountInt; i++) {
     createPromise(i + 1, dataObj.delayInt + i * dataObj.stepInt)
       .then(({ position, delay }) => {
         Notiflix.Notify.success(
